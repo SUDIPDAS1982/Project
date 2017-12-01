@@ -1,4 +1,14 @@
-﻿using System;
+﻿//===============================================================================
+//                                                                              '
+//                          SOFTWARE  :  "SealTest-Utility"                     '
+//                      CLASS MODULE  :  clsDB                                  '
+//                        VERSION NO  :  1.0                                    '
+//                      DEVELOPED BY  :  AdvEnSoft, Inc.                        '
+//                     LAST MODIFIED  :  01DEC17                                '
+//                                                                              '
+//===============================================================================
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +18,16 @@ using System.Collections.Specialized;
 
 namespace WindowsFormsApplication1
 {
+   
     class clsDB
     {
+        private String mDataSourceName;
+
+
+        //public clsDB(String DataSourceName_In)
+        //{
+        //    mDataSourceName = DataSourceName_In;
+        //}
 
         public SqlConnection GetConnection(String DBName_In)
         //===================================================
