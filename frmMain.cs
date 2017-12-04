@@ -21,14 +21,14 @@ using System.IO;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
         List<string> pOrg_No;
        
         List<string> pTemp_No;
         List<string> pTemp_No_Suffix;
 
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
         }
@@ -94,9 +94,9 @@ namespace WindowsFormsApplication1
                 int pSuccess = 0;
                 pstrActionSQL = "Delete FROM tblCustomer";
                 pSuccess = modMain.gDB.ExecuteCommand(pstrActionSQL, "SealPartDB2");
-                pSW.WriteLine("".PadRight(5) + "tblCustomer:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblCustomer:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
-                pSW.WriteLine("".PadRight(5) + "tblCust_Index:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblCust_Index:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
 
                 #endregion
@@ -106,9 +106,9 @@ namespace WindowsFormsApplication1
                 //....tblPlatform
                 pstrActionSQL = "Delete FROM tblPlatform";
                 pSuccess = modMain.gDB.ExecuteCommand(pstrActionSQL, "SealPartDB2");
-                pSW.WriteLine("".PadRight(5) + "tblPlatform:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblPlatform:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
-                pSW.WriteLine("".PadRight(5) + "tblPlat_Index:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblPlat_Index:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
 
                 #endregion
@@ -118,9 +118,9 @@ namespace WindowsFormsApplication1
                 //....tblLocation
                 pstrActionSQL = "Delete FROM tblLocation";
                 pSuccess = modMain.gDB.ExecuteCommand(pstrActionSQL, "SealPartDB2");
-                pSW.WriteLine("".PadRight(5) + "tblLocation:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblLocation:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
-                pSW.WriteLine("".PadRight(5) + "tblLoc_Index:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblLoc_Index:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
 
                 #endregion
@@ -130,9 +130,9 @@ namespace WindowsFormsApplication1
                 //....tblPN
                 pstrActionSQL = "Delete FROM tblPN";
                 pSuccess = modMain.gDB.ExecuteCommand(pstrActionSQL, "SealPartDB2");
-                pSW.WriteLine("".PadRight(5) + "tblPN:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblPN:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
-                pSW.WriteLine("".PadRight(5) + "tblPN_Index:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblPN_Index:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
 
                 #endregion
@@ -142,9 +142,9 @@ namespace WindowsFormsApplication1
                 //....tblRev
                 pstrActionSQL = "Delete FROM tblRev";
                 pSuccess = modMain.gDB.ExecuteCommand(pstrActionSQL, "SealPartDB2");
-                pSW.WriteLine("".PadRight(5) + "tblRev:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblRev:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
-                pSW.WriteLine("".PadRight(5) + "tblRev_Index:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblRev_Index:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
 
                 #endregion
@@ -154,8 +154,8 @@ namespace WindowsFormsApplication1
                 //....tblProject
                 pstrActionSQL = "Delete FROM tblProject";
                 pSuccess = modMain.gDB.ExecuteCommand(pstrActionSQL, "SealPartDB2");
-                pSW.WriteLine("".PadRight(5) + "tblProject:".PadRight(18) + "All Records of have been deleted successfully");
-
+                pSW.WriteLine("".PadRight(5) + "tblProject:".PadRight(18) + "All Records have been deleted successfully");
+                pSW.WriteLine();
                 #endregion
 
 
@@ -163,7 +163,7 @@ namespace WindowsFormsApplication1
                 //....tblHW_Face
                 pstrActionSQL = "Delete FROM tblHW_Face";
                 pSuccess = modMain.gDB.ExecuteCommand(pstrActionSQL, "SealPartDB2");
-                pSW.WriteLine("".PadRight(5) + "tblHW_Face:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblHW_Face:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
 
                 #endregion
@@ -173,7 +173,7 @@ namespace WindowsFormsApplication1
                 //....tblHW_AdjCSeal
                 pstrActionSQL = "Delete FROM tblHW_AdjCSeal";
                 pSuccess = modMain.gDB.ExecuteCommand(pstrActionSQL, "SealPartDB2");
-                pSW.WriteLine("".PadRight(5) + "tblHW_AdjCSeal:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblHW_AdjCSeal:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
 
                 #endregion
@@ -183,7 +183,7 @@ namespace WindowsFormsApplication1
                 //....tblHW_AdjESeal
                 pstrActionSQL = "Delete FROM tblHW_AdjESeal";
                 pSuccess = modMain.gDB.ExecuteCommand(pstrActionSQL, "SealPartDB2");
-                pSW.WriteLine("".PadRight(5) + "tblHW_AdjESeal:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblHW_AdjESeal:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
 
                 #endregion
@@ -193,7 +193,7 @@ namespace WindowsFormsApplication1
                 //....tblHW_AdjUSeal
                 pstrActionSQL = "Delete FROM tblHW_AdjUSeal";
                 pSuccess = modMain.gDB.ExecuteCommand(pstrActionSQL, "SealPartDB2");
-                pSW.WriteLine("".PadRight(5) + "tblHW_AdjUSeal:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblHW_AdjUSeal:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
                 pSW.WriteLine();
 
@@ -255,7 +255,7 @@ namespace WindowsFormsApplication1
 
                         catch
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblCustomer:".PadRight(18) + "No Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblCustomer:".PadRight(18) + "No Records have been copied");
                             pError = true;
                             break;
                         }
@@ -264,7 +264,7 @@ namespace WindowsFormsApplication1
 
                     if (!pError)
                     {
-                        pSW.WriteLine("".PadRight(5) + "tblCustomer:".PadRight(18) + "All Records of have been copied successfully");
+                        pSW.WriteLine("".PadRight(5) + "tblCustomer:".PadRight(18) + "All Records have been copied successfully");
                         pSW.WriteLine();
                         pDR = null;
                     }
@@ -319,7 +319,7 @@ namespace WindowsFormsApplication1
                         }
                         catch
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblPlatform:".PadRight(18) + "No Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblPlatform:".PadRight(18) + "No Records have been copied");
                             pError = true;
                             break;
                         }
@@ -327,9 +327,9 @@ namespace WindowsFormsApplication1
 
                     if (!pError)
                     {
-                        pSW.WriteLine("".PadRight(5) + "tblPlatform:".PadRight(18) + "All Records of have been copied successfully");
+                        pSW.WriteLine("".PadRight(5) + "tblPlatform:".PadRight(18) + "All Records have been copied successfully");
                         pSW.WriteLine();
-                        pSW.WriteLine("".PadRight(5) + "tblPlat_Index:".PadRight(18) + "All Records of have been copied successfully");
+                        pSW.WriteLine("".PadRight(5) + "tblPlat_Index:".PadRight(18) + "All Records have been copied successfully");
                         pSW.WriteLine();
                         pDR = null;
                     }
@@ -388,7 +388,7 @@ namespace WindowsFormsApplication1
                         }
                         catch
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblLocation:".PadRight(18) + "No Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblLocation:".PadRight(18) + "No Records have been copied");
                             pError = true;
                             break;
                         }
@@ -397,9 +397,9 @@ namespace WindowsFormsApplication1
 
                     if (!pError)
                     {
-                        pSW.WriteLine("".PadRight(5) + "tblLocation:".PadRight(18) + "All Records of have been copied successfully");
+                        pSW.WriteLine("".PadRight(5) + "tblLocation:".PadRight(18) + "All Records have been copied successfully");
                         pSW.WriteLine();
-                        pSW.WriteLine("".PadRight(5) + "tblLoc_Index:".PadRight(18) + "All Records of have been copied successfully");
+                        pSW.WriteLine("".PadRight(5) + "tblLoc_Index:".PadRight(18) + "All Records have been copied successfully");
                         pSW.WriteLine();
                         pDR = null;
                     }
@@ -490,7 +490,7 @@ namespace WindowsFormsApplication1
                         }
                         catch
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblPN:".PadRight(18) + "No Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblPN:".PadRight(18) + "No Records have been copied");
                             pError = true;
                             break;
                         }
@@ -498,9 +498,9 @@ namespace WindowsFormsApplication1
 
                     if (!pError)
                     {
-                        pSW.WriteLine("".PadRight(5) + "tblPN:".PadRight(18) + "All Records of have been copied successfully");
+                        pSW.WriteLine("".PadRight(5) + "tblPN:".PadRight(18) + "All Records have been copied successfully");
                         pSW.WriteLine();
-                        pSW.WriteLine("".PadRight(5) + "tblPN_Index:".PadRight(18) + "All Records of have been copied successfully");
+                        pSW.WriteLine("".PadRight(5) + "tblPN_Index:".PadRight(18) + "All Records have been copied successfully");
                         pSW.WriteLine();
                         pDR = null;
                     }
@@ -553,7 +553,7 @@ namespace WindowsFormsApplication1
                         }
                         catch
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblRev:".PadRight(18) + "No Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblRev:".PadRight(18) + "No Records have been copied");
                             pError = true;
                             break;
                         }
@@ -561,9 +561,9 @@ namespace WindowsFormsApplication1
 
                     if (!pError)
                     {
-                        pSW.WriteLine("".PadRight(5) + "tblRev:".PadRight(18) + "All Records of have been copied successfully");
+                        pSW.WriteLine("".PadRight(5) + "tblRev:".PadRight(18) + "All Records have been copied successfully");
                         pSW.WriteLine();
-                        pSW.WriteLine("".PadRight(5) + "tblRev_Index:".PadRight(18) + "All Records of have been copied successfully");
+                        pSW.WriteLine("".PadRight(5) + "tblRev_Index:".PadRight(18) + "All Records have been copied successfully");
                         pSW.WriteLine();
                         pDR = null;
                     }
@@ -603,7 +603,7 @@ namespace WindowsFormsApplication1
                         }
                         catch
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblProject:".PadRight(18) + "No Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblProject:".PadRight(18) + "No Records have been copied");
                             pError = true;
                             break;
                         }
@@ -611,7 +611,7 @@ namespace WindowsFormsApplication1
 
                     if (!pError)
                     {
-                        pSW.WriteLine("".PadRight(5) + "tblProject:".PadRight(18) + "All Records of have been copied successfully");
+                        pSW.WriteLine("".PadRight(5) + "tblProject:".PadRight(18) + "All Records have been copied successfully");
                         pSW.WriteLine();
                     }
                 }
@@ -751,7 +751,7 @@ namespace WindowsFormsApplication1
 
                         catch
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblHW_Face:".PadRight(18) + "No Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblHW_Face:".PadRight(18) + "No Records have been copied");
                             pError = true;
                             break;
                         }
@@ -760,7 +760,7 @@ namespace WindowsFormsApplication1
 
                     if (!pError)
                     {
-                        pSW.WriteLine("".PadRight(5) + "tblHW_Face:".PadRight(18) + "All Records of have been copied successfully");
+                        pSW.WriteLine("".PadRight(5) + "tblHW_Face:".PadRight(18) + "All Records have been copied successfully");
                         pSW.WriteLine();
                         pDR = null;
                     }
@@ -796,7 +796,7 @@ namespace WindowsFormsApplication1
                         }
                         catch
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblHW_AdjCSeal:".PadRight(18) + "No Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblHW_AdjCSeal:".PadRight(18) + "No Records have been copied");
                             pError = true;
                             break;
                         }
@@ -804,7 +804,7 @@ namespace WindowsFormsApplication1
 
                     if (!pError)
                     {
-                        pSW.WriteLine("".PadRight(5) + "tblHW_AdjCSeal:".PadRight(18) + "All Records of have been copied successfully");
+                        pSW.WriteLine("".PadRight(5) + "tblHW_AdjCSeal:".PadRight(18) + "All Records have been copied successfully");
                         pSW.WriteLine();
                         pDR = null;
                     }
@@ -839,7 +839,7 @@ namespace WindowsFormsApplication1
                         }
                         catch
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblHW_AdjESeal:".PadRight(18) + "No Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblHW_AdjESeal:".PadRight(18) + "No Records have been copied");
                             pError = true;
                             break;
                         }
@@ -847,7 +847,7 @@ namespace WindowsFormsApplication1
 
                     if (!pError)
                     {
-                        pSW.WriteLine("".PadRight(5) + "tblHW_AdjESeal:".PadRight(18) + "All Records of have been copied successfully");
+                        pSW.WriteLine("".PadRight(5) + "tblHW_AdjESeal:".PadRight(18) + "All Records have been copied successfully");
                         pSW.WriteLine();
                         pDR = null;
                     }
@@ -886,7 +886,7 @@ namespace WindowsFormsApplication1
                         }
                         catch
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblHW_AdjUSeal:".PadRight(18) + "No Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblHW_AdjUSeal:".PadRight(18) + "No Records have been copied");
                             pError = true;
                             break;
                         }
@@ -894,7 +894,7 @@ namespace WindowsFormsApplication1
 
                     if (!pError)
                     {
-                        pSW.WriteLine("".PadRight(5) + "tblHW_AdjUSeal:".PadRight(18) + "All Records of have been copied successfully");
+                        pSW.WriteLine("".PadRight(5) + "tblHW_AdjUSeal:".PadRight(18) + "All Records have been copied successfully");
                         pSW.WriteLine();
                         pDR = null;
                     }
@@ -911,7 +911,7 @@ namespace WindowsFormsApplication1
             #endregion
 
             pSW.Close();
-            MessageBox.Show("Records have been copied succesfully", "Copy Data", MessageBoxButtons.OK);
+            MessageBox.Show("'Seal Part' Records have been copied succesfully", "Copy Data", MessageBoxButtons.OK);
             Cursor = Cursors.Default;
 
         }
@@ -1062,51 +1062,51 @@ namespace WindowsFormsApplication1
                 //........tblFile
                 pstrActionSQL = "Delete FROM tblFile";
                 modMain.gDB.ExecuteCommand(pstrActionSQL, "SealTestDB2a");
-                pSW.WriteLine("".PadRight(5) + "tblFile:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblFile:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
          
                 //....tblFlowMeter
                 pstrActionSQL = "Delete FROM tblFlowMeter";
                 modMain.gDB.ExecuteCommand(pstrActionSQL, "SealTestDB2a");
-                pSW.WriteLine("".PadRight(5) + "tblFlowMeter:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblFlowMeter:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
 
                 //....tblForceStand
                 pstrActionSQL = "Delete FROM tblForceStand";
                 modMain.gDB.ExecuteCommand(pstrActionSQL, "SealTestDB2a");
-                pSW.WriteLine("".PadRight(5) + "tblForceStand:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblForceStand:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
 
 
                 //....tblLeakMedium
                 pstrActionSQL = "Delete FROM tblLeakMedium";
                 modMain.gDB.ExecuteCommand(pstrActionSQL, "SealTestDB2a");
-                pSW.WriteLine("".PadRight(5) + "tblLeakMedium:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblLeakMedium:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
 
                 //....tblLeakStand
                 pstrActionSQL = "Delete FROM tblLeakStand";
                 modMain.gDB.ExecuteCommand(pstrActionSQL, "SealTestDB2a");
-                pSW.WriteLine("".PadRight(5) + "tblLeakStand:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblLeakStand:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
 
 
                 //....tblLoadCell
                 pstrActionSQL = "Delete FROM tblLoadCell";
                 modMain.gDB.ExecuteCommand(pstrActionSQL, "SealTestDB2a");
-                pSW.WriteLine("".PadRight(5) + "tblLoadCell:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblLoadCell:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
 
                 //....tblPlatenSurfaceFinish
                 pstrActionSQL = "Delete FROM tblPlatenSurfaceFinish";
                 modMain.gDB.ExecuteCommand(pstrActionSQL, "SealTestDB2a");
-                pSW.WriteLine("".PadRight(5) + "tblFile:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblFile:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
 
                 //....tblTestUser
                 pstrActionSQL = "Delete FROM tblTestUser";
                 modMain.gDB.ExecuteCommand(pstrActionSQL, "SealTestDB2a");
-                pSW.WriteLine("".PadRight(5) + "tblPlatenSurfaceFinish:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblPlatenSurfaceFinish:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
 
             #endregion
@@ -1115,7 +1115,7 @@ namespace WindowsFormsApplication1
                 //....tblTestProject
                 pstrActionSQL = "Delete FROM tblTestProject";
                 modMain.gDB.ExecuteCommand(pstrActionSQL, "SealTestDB2a");
-                pSW.WriteLine("".PadRight(5) + "tblTestProject:".PadRight(18) + "All Records of have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblTestProject:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
                 pSW.WriteLine();
 
@@ -1155,7 +1155,7 @@ namespace WindowsFormsApplication1
                             }
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblFile:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblFile:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -1163,7 +1163,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblFile:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblFile:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }               
@@ -1198,7 +1198,7 @@ namespace WindowsFormsApplication1
                             }
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblFlowMeter:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblFlowMeter:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -1206,7 +1206,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblFlowMeter:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblFlowMeter:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -1242,7 +1242,7 @@ namespace WindowsFormsApplication1
                             }
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblForceStand:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblForceStand:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -1250,7 +1250,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblForceStand:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblForceStand:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }               
@@ -1285,7 +1285,7 @@ namespace WindowsFormsApplication1
                             }
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblLeakMedium:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblLeakMedium:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -1293,7 +1293,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblLeakMedium:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblLeakMedium:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -1329,7 +1329,7 @@ namespace WindowsFormsApplication1
                             }
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblLeakStand:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblLeakStand:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -1337,7 +1337,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblLeakStand:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblLeakStand:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -1372,7 +1372,7 @@ namespace WindowsFormsApplication1
                             }
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblLoadCell:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblLoadCell:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -1381,7 +1381,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblLoadCell:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblLoadCell:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -1416,7 +1416,7 @@ namespace WindowsFormsApplication1
                             }
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblPlatenSurfaceFinish:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblPlatenSurfaceFinish:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -1424,7 +1424,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblPlatenSurfaceFinish:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblPlatenSurfaceFinish:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -1485,7 +1485,7 @@ namespace WindowsFormsApplication1
                             }
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblTestProject:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblTestProject:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -1493,7 +1493,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblTestProject:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblTestProject:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -1728,7 +1728,7 @@ namespace WindowsFormsApplication1
 
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblSpec:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblSpec:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -1736,7 +1736,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblSpec:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblSpec:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -1771,7 +1771,7 @@ namespace WindowsFormsApplication1
                             }
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblMO:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblMO:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -1779,7 +1779,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblMO:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblMO:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -1817,7 +1817,7 @@ namespace WindowsFormsApplication1
                             }
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblUnit:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblUnit:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -1825,7 +1825,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblUnit:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblUnit:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -1863,7 +1863,7 @@ namespace WindowsFormsApplication1
 
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblUnit:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblUnit:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -1871,7 +1871,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblTestCavity:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblTestCavity:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -1909,7 +1909,7 @@ namespace WindowsFormsApplication1
                             }
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblTestOpCond:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblTestOpCond:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -1917,7 +1917,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblTestOpCond:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblTestOpCond:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -2041,7 +2041,7 @@ namespace WindowsFormsApplication1
 
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblReport:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblReport:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -2050,7 +2050,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblReport:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblReport:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -2097,7 +2097,7 @@ namespace WindowsFormsApplication1
 
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblLeak:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblLeak:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -2105,7 +2105,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblLeak:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblLeak:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -2145,7 +2145,7 @@ namespace WindowsFormsApplication1
                             }
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblLeakData:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblLeakData:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -2153,7 +2153,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblLeakData:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblLeakData:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -2192,7 +2192,7 @@ namespace WindowsFormsApplication1
                             }
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblLoad:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblLoad:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -2200,7 +2200,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblLoad:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblLoad:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -2240,7 +2240,7 @@ namespace WindowsFormsApplication1
                             }
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblLoadData:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblLoadData:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -2248,7 +2248,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblLoadData:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblLoadData:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -2286,7 +2286,7 @@ namespace WindowsFormsApplication1
                             }
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblPress:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblPress:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -2294,7 +2294,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblPress:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblPress:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -2332,7 +2332,7 @@ namespace WindowsFormsApplication1
                             }
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblPressureData:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblPressureData:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -2341,7 +2341,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblPressureData:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblPressureData:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -2379,7 +2379,7 @@ namespace WindowsFormsApplication1
                             }
                             catch (Exception pEx)
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblReportGenSeal:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblReportGenSeal:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -2387,7 +2387,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblReportGenSeal:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblReportGenSeal:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -2459,7 +2459,7 @@ namespace WindowsFormsApplication1
                             }
                             catch
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblReportGenImage:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblReportGenImage:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -2467,7 +2467,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblReportGenImage:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblReportGenImage:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -2505,7 +2505,7 @@ namespace WindowsFormsApplication1
                             }
                             catch
                             {
-                                pSW.WriteLine("".PadRight(5) + "tblReportResult:".PadRight(18) + "No Records of have been copied successfully");
+                                pSW.WriteLine("".PadRight(5) + "tblReportResult:".PadRight(18) + "No Records have been copied");
                                 pError = true;
                                 break;
                             }
@@ -2513,7 +2513,7 @@ namespace WindowsFormsApplication1
 
                         if (!pError)
                         {
-                            pSW.WriteLine("".PadRight(5) + "tblReportResult:".PadRight(18) + "All Records of have been copied successfully");
+                            pSW.WriteLine("".PadRight(5) + "tblReportResult:".PadRight(18) + "All Records have been copied successfully");
                             pSW.WriteLine();
                             pDR = null;
                         }
@@ -2529,7 +2529,7 @@ namespace WindowsFormsApplication1
             #endregion
 
             pSW.Close();
-            MessageBox.Show("Records have been copied succesfully", "Copy Data", MessageBoxButtons.OK);
+            MessageBox.Show("'Seal Test' Records have been copied succesfully", "Copy Data", MessageBoxButtons.OK);
             Cursor = Cursors.Default;                     
 
         }
@@ -2543,6 +2543,12 @@ namespace WindowsFormsApplication1
                 img.Save(mStream, img.RawFormat);
                 return mStream.ToArray();
             }
+        }
+
+        private void cmdOK_Click(object sender, EventArgs e)
+            //===============================================
+        {
+            this.Close();
         }
 
         ////private void button2_Click(object sender, EventArgs e)
