@@ -4,7 +4,7 @@
 //                      CLASS MODULE  :  clsFile                                '
 //                        VERSION NO  :  1.0                                    '
 //                      DEVELOPED BY  :  AdvEnSoft, Inc.                        '
-//                     LAST MODIFIED  :  01DEC17                                '
+//                     LAST MODIFIED  :  04DEC17                                '
 //                                                                              '
 //===============================================================================
 
@@ -20,23 +20,40 @@ namespace WindowsFormsApplication1
 {
     class clsFile
     {
-        const string mConfigFile_Name = "";
+        
+		#region "MEMBER VARIABLES:"
 
-       #region "MEMBER VARIABLES:"
+			//...."Directories & Folders:"
+			private const String mcDriveRoot = "C:";
 
-            private String mDataSourceName;
-            private string mLogFileName;
+			//....Root Directory.
+			private const String mcDirRoor = mcDriveRoot + "\\Seal Suite\\";
 
-        #endregion    
-       
-        #region "PROPERTY ROUTINES:"
-            
-            public String DataSourceName
+			//Titles & Names:            
+			//------------------
+			private const String mcConfigFile_Title = "Seal10.config";
+		
+
+			private String mDataSourceName;
+            private const string mcLogFileName = mcDirRoor + "SealTest\\Log File\\DataTransferLog.txt";
+			private const String mConfigFile_Name = mcDirRoor + mcConfigFile_Title;
+
+		#endregion
+
+		#region "PROPERTY ROUTINES:"
+
+		public String DataSourceName
             //=======================
             {
                 get { return mDataSourceName; }
                 set { mDataSourceName = value; }
             }
+
+		public String LogFileName
+			//====================
+		{
+			get {return mcLogFileName; }
+		}
 
         #endregion
 
@@ -47,7 +64,7 @@ namespace WindowsFormsApplication1
                 //===============
                 {
                     //....Reads Configuration File.
-                    ////ReadConfigFile();
+                    ReadConfigFile();
                 }
             #endregion
 

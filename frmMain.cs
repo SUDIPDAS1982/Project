@@ -4,7 +4,7 @@
 //                      CLASS MODULE  :  frmMain                                '
 //                        VERSION NO  :  1.0                                    '
 //                      DEVELOPED BY  :  AdvEnSoft, Inc.                        '
-//                     LAST MODIFIED  :  01DEC17                                '
+//                     LAST MODIFIED  :  04DEC17                                '
 //                                                                              '
 //===============================================================================
 using System;
@@ -52,11 +52,11 @@ namespace WindowsFormsApplication1
 
             Cursor = Cursors.WaitCursor;
             StreamWriter pSW = null;
-            string pFilePath = "C:\\Seal Suite\\SealTest\\Log File\\Log.txt";
+            //string modMain.gFile.LogFileName = "C:\\Seal Suite\\SealTest\\Log File\\Log.txt";
 
-            if (File.Exists(pFilePath))
+            if (File.Exists(modMain.gFile.LogFileName))
             {
-                pSW = new StreamWriter(pFilePath, true);
+                pSW = new StreamWriter(modMain.gFile.LogFileName, true);
                 pSW.WriteLine("Date".PadRight(15) + "Time");
                 pSW.WriteLine(DateTime.Now.ToShortDateString().PadRight(15) + DateTime.Now.ToShortTimeString());
                 pSW.WriteLine();
@@ -70,7 +70,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                pSW = File.CreateText(pFilePath);               
+                pSW = File.CreateText(modMain.gFile.LogFileName);               
                 pSW.WriteLine();
                 pSW.WriteLine("Date".PadRight(15) + "Time");
                 pSW.WriteLine(DateTime.Now.ToShortDateString().PadRight(15) + DateTime.Now.ToShortTimeString());
@@ -1022,11 +1022,11 @@ namespace WindowsFormsApplication1
             Cursor = Cursors.WaitCursor;
 
             StreamWriter pSW = null;
-            string pFilePath = "C:\\Seal Suite\\SealTest\\Log File\\Log.txt";
+            //string pFilePath = "C:\\Seal Suite\\SealTest\\Log File\\Log.txt";
 
-            if (File.Exists(pFilePath))
+            if (File.Exists(modMain.gFile.LogFileName))
             {
-                pSW = new StreamWriter(pFilePath, true);
+                pSW = new StreamWriter(modMain.gFile.LogFileName, true);
                 pSW.WriteLine("Date".PadRight(15) + "Time");
                 pSW.WriteLine(DateTime.Now.ToShortDateString().PadRight(15) + DateTime.Now.ToShortTimeString());
                 pSW.WriteLine();
@@ -1040,7 +1040,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                pSW = File.CreateText(pFilePath);
+                pSW = File.CreateText(modMain.gFile.LogFileName);
                 pSW.WriteLine();
                 pSW.WriteLine("Date".PadRight(15) + "Time");
                 pSW.WriteLine(DateTime.Now.ToShortDateString().PadRight(15) + DateTime.Now.ToShortTimeString());
@@ -1100,13 +1100,13 @@ namespace WindowsFormsApplication1
                 //....tblPlatenSurfaceFinish
                 pstrActionSQL = "Delete FROM tblPlatenSurfaceFinish";
                 modMain.gDB.ExecuteCommand(pstrActionSQL, "SealTestDB2a");
-                pSW.WriteLine("".PadRight(5) + "tblFile:".PadRight(18) + "All Records have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblPlatenSurfaceFinish:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
 
                 //....tblTestUser
                 pstrActionSQL = "Delete FROM tblTestUser";
                 modMain.gDB.ExecuteCommand(pstrActionSQL, "SealTestDB2a");
-                pSW.WriteLine("".PadRight(5) + "tblPlatenSurfaceFinish:".PadRight(18) + "All Records have been deleted successfully");
+                pSW.WriteLine("".PadRight(5) + "tblTestUser:".PadRight(18) + "All Records have been deleted successfully");
                 pSW.WriteLine();
 
             #endregion
@@ -1435,13 +1435,134 @@ namespace WindowsFormsApplication1
                         pSW.WriteLine();
                     }
 
-                #endregion
+			#endregion
 
 
-                #region "tblTestProject:"
+				#region "tblTestUser:"
 
-                    //....tblTestProject
-                    pstrSQL = "Select * FROM tblTestProject";
+				//....tblTestUser
+				pstrSQL = "Select * FROM tblTestUser";
+				pCon = new SqlConnection();
+				pDR = modMain.gDB.GetDataReader("SealTestDB2", pstrSQL, ref pCon);
+				pError = false;
+				
+
+				if (pDR.HasRows)
+				{
+					while (pDR.Read())
+					{
+					Object pRoleAdmin = DBNull.Value;// "NULL";
+					Object pRoleTester = DBNull.Value;//"NULL";
+					Object pRoleEngg = DBNull.Value;// "NULL";
+					Object pRoleQuality = DBNull.Value;// "NULL";
+					
+					if (pDR["fldRoleAdmin"] != DBNull.Value)
+					{
+						pRoleAdmin = Convert.ToInt16(pDR["fldRoleAdmin"]);
+
+					}
+
+					if (pDR["fldRoleTester"] != DBNull.Value)
+					{
+						pRoleTester = Convert.ToInt16(pDR["fldRoleTester"]);
+
+					}
+
+					if (pDR["fldRoleEngg"] != DBNull.Value)
+					{
+						pRoleEngg = Convert.ToInt16(pDR["fldRoleEngg"]);
+
+					}
+
+					if (pDR["fldRoleQuality"] != DBNull.Value)
+					{
+						pRoleQuality = Convert.ToInt16(pDR["fldRoleQuality"]);
+
+					}
+
+					////Image pImg = null;
+					//byte[] pArray1 = null;
+
+					//if(
+					//byte[] pArray = (byte[])(pDR["fldSignature"]);
+					//MemoryStream pMS = null;
+
+					//if (((pArray != null)))
+					//{
+					//	pMS = new MemoryStream(pArray);
+					//	pImg = Image.FromStream(pMS);
+					//	//pictureBox1.Image = pImg;
+					//	//pictureBox1.Visible = true;
+					//}
+				
+						try
+						{
+							SqlConnection pConn = new SqlConnection();
+							pConn = modMain.gDB.GetConnection("SealTestDB2a");
+						
+
+							string strACTIONQry = "";
+							strACTIONQry = "INSERT INTO tblTestUser(fldName,fldSystemLogin, fldRoleAdmin, fldRoleTester, fldRoleEngg, fldRoleQuality, fldSignature) " +
+										   "values(@fldName, @fldSystemLogin, @fldRoleAdmin, @fldRoleTester, @fldRoleEngg, @fldRoleQuality, @fldSignature)";
+							SqlCommand pCmd = new SqlCommand(strACTIONQry, pConn);
+							int pCountRecords = 0;
+							pCmd.Parameters.Add("@fldName", System.Data.SqlDbType.VarChar);
+							pCmd.Parameters.Add("@fldSystemLogin", System.Data.SqlDbType.VarChar);
+							pCmd.Parameters.Add("@fldRoleAdmin", System.Data.SqlDbType.Bit);
+							pCmd.Parameters.Add("@fldRoleTester", System.Data.SqlDbType.Bit);
+							pCmd.Parameters.Add("@fldRoleEngg", System.Data.SqlDbType.Bit);
+							pCmd.Parameters.Add("@fldRoleQuality", System.Data.SqlDbType.Bit);
+							pCmd.Parameters.Add("@fldSignature", System.Data.SqlDbType.Image);
+
+							pCmd.Parameters["@fldName"].Value = Convert.ToString(pDR["fldName"]);
+							pCmd.Parameters["@fldSystemLogin"].Value = Convert.ToString(pDR["fldSystemLogin"]);
+							pCmd.Parameters["@fldRoleAdmin"].Value = pRoleAdmin;
+							pCmd.Parameters["@fldRoleTester"].Value = pRoleTester;
+							pCmd.Parameters["@fldRoleEngg"].Value = pRoleEngg;
+							pCmd.Parameters["@fldRoleQuality"].Value = pRoleQuality;
+
+							if (pDR["fldSignature"] != DBNull.Value)
+							{
+								byte[] pArray = (byte[])(pDR["fldSignature"]);
+								pCmd.Parameters["@fldSignature"].Value = pArray;
+							}							
+							else
+							{
+								pCmd.Parameters["@fldSignature"].Value = DBNull.Value;
+							}
+							
+							pCountRecords = pCmd.ExecuteNonQuery();
+							pConn.Close();
+
+						}
+						catch
+						{
+							pSW.WriteLine("".PadRight(5) + "tblTestUser:".PadRight(18) + "No Records have been copied");
+							pError = true;
+							break;
+						}
+					}
+
+					if (!pError)
+					{
+						pSW.WriteLine("".PadRight(5) + "tblTestUser:".PadRight(18) + "All Records have been copied successfully");
+						pSW.WriteLine();
+						pDR = null;
+					}
+				}
+				else
+				{
+					pSW.WriteLine("".PadRight(5) + "tblTestUser:".PadRight(18) + "No Record Exists");
+					pSW.WriteLine();
+				}
+
+			#endregion
+
+
+				#region "tblTestProject:"
+
+					//....tblTestProject
+					pstrSQL = "Select * FROM tblTestProject";
                     pCon = new SqlConnection();
                     pDR = modMain.gDB.GetDataReader("SealTestDB2", pstrSQL, ref pCon);
                     pError = false;
@@ -2551,54 +2672,60 @@ namespace WindowsFormsApplication1
             this.Close();
         }
 
-        ////private void button2_Click(object sender, EventArgs e)
-        ////{
-        ////    try
-        ////    {
-        ////        //....tblReportGenImage
-        ////        String pstrSQL = "Select * FROM tblReportGenImage where fldTestProjectID = 1";
+		private void cmdView_Click(object sender, EventArgs e)
+			//=================================================
+		{
 
-        ////        SqlConnection pCon = new SqlConnection();
-        ////        SqlDataReader pDR = modMain.gDB.GetDataReader("SealTestDB2a", pstrSQL, ref pCon);
+		}
 
-        ////        if (pDR.Read())
-        ////        {
-        ////            Image pImg1 = null;
-        ////            int pID = Convert.ToInt16(pDR["fldTestProjectID"]);
-        ////            //pictureBox1.Image = Base64ToImage(pDR[7].ToString());
+		////private void button2_Click(object sender, EventArgs e)
+		////{
+		////    try
+		////    {
+		////        //....tblReportGenImage
+		////        String pstrSQL = "Select * FROM tblReportGenImage where fldTestProjectID = 1";
 
-        ////            if (pID == 1)
-        ////            {
-        ////               // byte[] pImgArray = new byte[0];
-        ////               //pImgArray = (byte[])(pDR["fldImage"]);
-        ////               // //MemoryStream pMS1 = null;
-        ////               // //if (((pImgArray != null)))
-        ////               // //{
-        ////               // //    pMS1 = new MemoryStream(pImgArray);
-        ////               // //    pImg1 = Image.FromStream(pMS1);
-        ////               // //    pictureBox1.Image = pImg1;
-        ////               // //}
-        ////               //pictureBox1.Image = Base64ToImage(pDR["fldImage"].ToString());
+		////        SqlConnection pCon = new SqlConnection();
+		////        SqlDataReader pDR = modMain.gDB.GetDataReader("SealTestDB2a", pstrSQL, ref pCon);
 
-        ////                Image pImg = null;
-        ////                byte[] pArray = (byte[])(pDR["fldImage"]);
-        ////                MemoryStream pMS = null;
+		////        if (pDR.Read())
+		////        {
+		////            Image pImg1 = null;
+		////            int pID = Convert.ToInt16(pDR["fldTestProjectID"]);
+		////            //pictureBox1.Image = Base64ToImage(pDR[7].ToString());
+
+		////            if (pID == 1)
+		////            {
+		////               // byte[] pImgArray = new byte[0];
+		////               //pImgArray = (byte[])(pDR["fldImage"]);
+		////               // //MemoryStream pMS1 = null;
+		////               // //if (((pImgArray != null)))
+		////               // //{
+		////               // //    pMS1 = new MemoryStream(pImgArray);
+		////               // //    pImg1 = Image.FromStream(pMS1);
+		////               // //    pictureBox1.Image = pImg1;
+		////               // //}
+		////               //pictureBox1.Image = Base64ToImage(pDR["fldImage"].ToString());
+
+		////                Image pImg = null;
+		////                byte[] pArray = (byte[])(pDR["fldImage"]);
+		////                MemoryStream pMS = null;
 
 
-        ////                if (((pArray != null)))
-        ////                {
-        ////                    pMS = new MemoryStream(pArray);
-        ////                    pImg = Image.FromStream(pMS);
-        ////                    pictureBox1.Image = pImg;
-        ////                    pictureBox1.Visible = true;
-        ////                }
-        ////            }
-        ////        }
-        ////    }
-        ////    catch
-        ////    {
-        ////    }
-        ////}
+		////                if (((pArray != null)))
+		////                {
+		////                    pMS = new MemoryStream(pArray);
+		////                    pImg = Image.FromStream(pMS);
+		////                    pictureBox1.Image = pImg;
+		////                    pictureBox1.Visible = true;
+		////                }
+		////            }
+		////        }
+		////    }
+		////    catch
+		////    {
+		////    }
+		////}
 
-    }
+	}
 }

@@ -4,7 +4,7 @@
 //                      CLASS MODULE  :  clsDB                                  '
 //                        VERSION NO  :  1.0                                    '
 //                      DEVELOPED BY  :  AdvEnSoft, Inc.                        '
-//                     LAST MODIFIED  :  01DEC17                                '
+//                     LAST MODIFIED  :  04DEC17                                '
 //                                                                              '
 //===============================================================================
 
@@ -21,14 +21,7 @@ namespace WindowsFormsApplication1
    
     class clsDB
     {
-        private String mDataSourceName;
-
-
-        //public clsDB(String DataSourceName_In)
-        //{
-        //    mDataSourceName = DataSourceName_In;
-        //}
-
+        
         public SqlConnection GetConnection(String DBName_In)
         //===================================================
         {
@@ -37,9 +30,9 @@ namespace WindowsFormsApplication1
             try
             {
                 string pstrConnectDB = "";
-                pstrConnectDB = "Data source= PC-06;" +
-                                //"Initial Catalog = BearingDB3a;" +
-                                 "Initial Catalog = " + DBName_In + ";" +
+				//pstrConnectDB = "Data source= PC-06;" +
+				pstrConnectDB = "Data source= " + modMain.gFile.DataSourceName + ";" +
+								"Initial Catalog = " + DBName_In + ";" +
                                 "Integrated Security= SSPI;";
 
 
@@ -66,7 +59,7 @@ namespace WindowsFormsApplication1
         }
 
         public SqlDataReader GetDataReader(String DBName_In, string strSELECTQry_In,ref SqlConnection Conn_In)
-        //=================================================================================== 
+        //===================================================================================================== 
 
                //This routine returns DataReader
         //       Input   Parameters      :   SQL Statement 
@@ -75,9 +68,9 @@ namespace WindowsFormsApplication1
             try
             {
                 string pstrConnectDB = "";
-                pstrConnectDB = "Data source= PC-06;" +
-                                //"Initial Catalog = BearingDB3a;" +
-                                "Initial Catalog = " + DBName_In + ";" +
+				//pstrConnectDB = "Data source= PC-06;" +
+				pstrConnectDB = "Data source= " + modMain.gFile.DataSourceName + ";" +
+								"Initial Catalog = " + DBName_In + ";" +
                                 "Integrated Security= SSPI;";
 
                 //....Create & Open a new Connection -
