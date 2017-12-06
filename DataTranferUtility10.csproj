@@ -8,8 +8,8 @@
     <ProjectGuid>{4C172F57-1C76-43F4-B868-81AF4B8A83EF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataTranferUtility</RootNamespace>
-    <AssemblyName>DataTranferUtility</AssemblyName>
+    <RootNamespace>DataTranferUtility10</RootNamespace>
+    <AssemblyName>DataTranferUtility10</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
