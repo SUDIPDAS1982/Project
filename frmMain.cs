@@ -116,31 +116,31 @@ namespace WindowsFormsApplication1
 			{
 				pSW = new StreamWriter(modMain.gFile.LogFileName, true);
 				pSW.WriteLine();
-				pSW.WriteLine("Data Transfer Utility 1.0");
+				pSW.WriteLine("SealSuite Data Transfer Utility 1.0");
 				pSW.WriteLine("System Login: " + Environment.UserName.PadRight(10) +
 							  "Date:".PadRight(5) + DateTime.Now.ToShortDateString().PadRight(15) +
 							  "Time:".PadRight(5) + DateTime.Now.ToShortTimeString());
 				pSW.WriteLine();
-				pSW.WriteLine("1. Module: SealPart \t Source Database: SealPartDB1a \t Target Database: SealPartDB2");
+				pSW.WriteLine("1. Module: SealPart \t Databases: Source - SealPartDB1a \t Target - SealPartDB2");
 				pSW.WriteLine();			
 			}
 			else
 			{
 				pSW = File.CreateText(modMain.gFile.LogFileName);
-				pSW.WriteLine("Data Transfer Utility 1.0");
+				pSW.WriteLine("SealSuite Data Transfer Utility 1.0");
 				pSW.WriteLine("System Login: " + Environment.UserName.PadRight(10) +
 							  "Date:".PadRight(5) + DateTime.Now.ToShortDateString().PadRight(15) +
 							  "Time:".PadRight(5) + DateTime.Now.ToShortTimeString());
 				pSW.WriteLine();
-				pSW.WriteLine("1. Module: SealPart \t Source Database: SealPartDB1a \t Target Database: SealPartDB2");
+				pSW.WriteLine("1. Module: SealPart \t Databases: Source - SealPartDB1a \t Target - SealPartDB2");
 				pSW.WriteLine();			
 			}
 
 			
 			#region "COPY RECORDS FROM OLD DATABASE:"
 
-			pSW.WriteLine("".PadRight(5) + "Copy records from Source Database (SealPartDB1a) to Target Database (SealPartDB2)");
-			pSW.WriteLine("".PadRight(5) + "---------------------------------------------------------------------------------------");
+			pSW.WriteLine("".PadRight(5) + "Copy records from Source (SealPartDB1a) to Target (SealPartDB2)");
+			pSW.WriteLine("".PadRight(5) + "---------------------------------------------------------------");
 
 			
 			//....SealPartDB2
@@ -159,7 +159,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{				
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblCustomer:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblCustomer:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}		
@@ -177,7 +177,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblPlatform:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblPlatform:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 				
@@ -196,7 +196,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblLocation:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblLocation:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 					
@@ -216,7 +216,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblPN:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblPN:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 					
@@ -235,7 +235,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblRev:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblRev:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}		
@@ -254,7 +254,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblProject:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblProject:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -273,7 +273,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblHW_Face:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblHW_Face:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}			
@@ -292,7 +292,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblHW_AdjCSeal:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblHW_AdjCSeal:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -310,7 +310,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblHW_AdjESeal:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblHW_AdjESeal:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}		
@@ -328,7 +328,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblHW_AdjUSeal:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblHW_AdjUSeal:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -361,7 +361,7 @@ namespace WindowsFormsApplication1
 
 							catch
 							{
-								pSW.WriteLine("".PadRight(5) + "tblCustomer:".PadRight(18) + "No Records have been copied");
+								pSW.WriteLine("".PadRight(5) + "tblCustomer:".PadRight(18) + "No Records copied");
 								pError = true;
 								break;
 							}
@@ -370,7 +370,7 @@ namespace WindowsFormsApplication1
 
 						if (!pError)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblCustomer:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+							pSW.WriteLine("".PadRight(5) + "tblCustomer:".PadRight(18) + pRecCount.ToString() + " Records copied");
 							pSW.WriteLine();
 							pDR = null;
 						}
@@ -405,7 +405,7 @@ namespace WindowsFormsApplication1
 							}
 							catch
 							{
-								pSW.WriteLine("".PadRight(5) + "tblPlatform:".PadRight(18) + "No Records have been copied");
+								pSW.WriteLine("".PadRight(5) + "tblPlatform:".PadRight(18) + "No Records copied");
 								pError = true;
 								break;
 							}
@@ -413,7 +413,7 @@ namespace WindowsFormsApplication1
 
 						if (!pError)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblPlatform:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+							pSW.WriteLine("".PadRight(5) + "tblPlatform:".PadRight(18) + pRecCount.ToString() + " Records copied");
 							pSW.WriteLine();
 							pDR = null;
 						}
@@ -453,7 +453,7 @@ namespace WindowsFormsApplication1
 							}
 							catch
 							{
-								pSW.WriteLine("".PadRight(5) + "tblLocation:".PadRight(18) + "No Records have been copied");
+								pSW.WriteLine("".PadRight(5) + "tblLocation:".PadRight(18) + "No Records copied");
 								pError = true;
 								break;
 							}
@@ -462,7 +462,7 @@ namespace WindowsFormsApplication1
 
 						if (!pError)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblLocation:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+							pSW.WriteLine("".PadRight(5) + "tblLocation:".PadRight(18) + pRecCount.ToString() + " Records copied");
 							pSW.WriteLine();
 							pDR = null;
 						}
@@ -532,7 +532,7 @@ namespace WindowsFormsApplication1
 							}
 							catch
 							{
-								pSW.WriteLine("".PadRight(5) + "tblPN:".PadRight(18) + "No Records have been copied");
+								pSW.WriteLine("".PadRight(5) + "tblPN:".PadRight(18) + "No Records copied");
 								pError = true;
 								break;
 							}
@@ -540,7 +540,7 @@ namespace WindowsFormsApplication1
 
 						if (!pError)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblPN:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+							pSW.WriteLine("".PadRight(5) + "tblPN:".PadRight(18) + pRecCount.ToString() + " Records copied");
 							pSW.WriteLine();						
 							pDR = null;
 						}
@@ -577,7 +577,7 @@ namespace WindowsFormsApplication1
 							}
 							catch
 							{
-								pSW.WriteLine("".PadRight(5) + "tblRev:".PadRight(18) + "No Records have been copied");
+								pSW.WriteLine("".PadRight(5) + "tblRev:".PadRight(18) + "No Records copied");
 								pError = true;
 								break;
 							}
@@ -585,7 +585,7 @@ namespace WindowsFormsApplication1
 
 						if (!pError)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblRev:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+							pSW.WriteLine("".PadRight(5) + "tblRev:".PadRight(18) + pRecCount.ToString() + " Records copied");
 							pSW.WriteLine();
 							pDR = null;
 						}
@@ -624,7 +624,7 @@ namespace WindowsFormsApplication1
 							}
 							catch
 							{
-								pSW.WriteLine("".PadRight(5) + "tblProject:".PadRight(18) + "No Records have been copied");
+								pSW.WriteLine("".PadRight(5) + "tblProject:".PadRight(18) + "No Records copied");
 								pError = true;
 								break;
 							}
@@ -632,7 +632,7 @@ namespace WindowsFormsApplication1
 
 						if (!pError)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblProject:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+							pSW.WriteLine("".PadRight(5) + "tblProject:".PadRight(18) + pRecCount.ToString() + " Records copied");
 							pSW.WriteLine();
 						}
 					}
@@ -797,7 +797,7 @@ namespace WindowsFormsApplication1
 
 							catch
 							{
-								pSW.WriteLine("".PadRight(5) + "tblHW_Face:".PadRight(18) + "No Records have been copied");
+								pSW.WriteLine("".PadRight(5) + "tblHW_Face:".PadRight(18) + "No Records copied");
 								pError = true;
 								break;
 							}
@@ -806,7 +806,7 @@ namespace WindowsFormsApplication1
 
 						if (!pError)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblHW_Face:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+							pSW.WriteLine("".PadRight(5) + "tblHW_Face:".PadRight(18) + pRecCount.ToString() + " Records copied");
 							pSW.WriteLine();
 							pDR = null;
 						}
@@ -842,7 +842,7 @@ namespace WindowsFormsApplication1
 						}
 						catch
 						{
-							pSW.WriteLine("".PadRight(5) + "tblHW_AdjCSeal:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblHW_AdjCSeal:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -850,7 +850,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblHW_AdjCSeal:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblHW_AdjCSeal:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -887,7 +887,7 @@ namespace WindowsFormsApplication1
 							}
 							catch
 							{
-								pSW.WriteLine("".PadRight(5) + "tblHW_AdjESeal:".PadRight(18) + "No Records have been copied");
+								pSW.WriteLine("".PadRight(5) + "tblHW_AdjESeal:".PadRight(18) + "No Records copied");
 								pError = true;
 								break;
 							}
@@ -895,7 +895,7 @@ namespace WindowsFormsApplication1
 
 						if (!pError)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblHW_AdjESeal:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+							pSW.WriteLine("".PadRight(5) + "tblHW_AdjESeal:".PadRight(18) + pRecCount.ToString() + " Records copied");
 							pSW.WriteLine();
 							pDR = null;
 						}
@@ -933,7 +933,7 @@ namespace WindowsFormsApplication1
 							}
 							catch
 							{
-								pSW.WriteLine("".PadRight(5) + "tblHW_AdjUSeal:".PadRight(18) + "No Records have been copied");
+								pSW.WriteLine("".PadRight(5) + "tblHW_AdjUSeal:".PadRight(18) + "No Records copied");
 								pError = true;
 								break;
 							}
@@ -941,7 +941,7 @@ namespace WindowsFormsApplication1
 
 						if (!pError)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblHW_AdjUSeal:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+							pSW.WriteLine("".PadRight(5) + "tblHW_AdjUSeal:".PadRight(18) + pRecCount.ToString() + " Records copied");
 							pSW.WriteLine();
 							pDR = null;
 						}
@@ -960,7 +960,7 @@ namespace WindowsFormsApplication1
 				}
 				else
 				{					
-					pSW.WriteLine("".PadRight(5) + "Target Database (SealPartDB2) contains record(s). Copy process aborted.");
+					pSW.WriteLine("".PadRight(5) + "Target Database (SealPartDB2) contains records. Copy process aborted.");
 					pSW.WriteLine();
 					pSW.Close();
 				}
@@ -989,26 +989,26 @@ namespace WindowsFormsApplication1
 			{
 				pSW = new StreamWriter(modMain.gFile.LogFileName, true);
 				pSW.WriteLine();
-				pSW.WriteLine("2. Module: SealTest \t Source Database: SealTestDB2 \t Target Database: SealTestDB2a");
+				pSW.WriteLine("2. Module: SealTest \t Databases: Source - SealTestDB2 \t Target - SealTestDB2a");
 				pSW.WriteLine();			
 			}
 			else
 			{
 				pSW = File.CreateText(modMain.gFile.LogFileName);
-				pSW.WriteLine("Data Transfer Utility 1.0");
+				pSW.WriteLine("SealSuite Data Transfer Utility 1.0");
 				pSW.WriteLine("System Login: " + Environment.UserName.PadRight(10) +
 							  "Date:".PadRight(5) + DateTime.Now.ToShortDateString().PadRight(15) +
 							  "Time:".PadRight(5) + DateTime.Now.ToShortTimeString());
 				pSW.WriteLine();
-				pSW.WriteLine("2. Module: SealTest \t Source Database: SealTestDB2 \t Target Database: SealTestDB2a");
+				pSW.WriteLine("2. Module: SealTest \t Databases: Source - SealTestDB2 \t Target - SealTestDB2a");
 				pSW.WriteLine();				
 			}
 
 			#region "COPY RECORDS FROM OLD DATABASE:"
 
 			//....SealTestDB2a
-			pSW.WriteLine("".PadRight(5) + "Copy records from Source Database (SealTestDB2) to Target Database (SealTestDB2a)");
-			pSW.WriteLine("".PadRight(5) + "---------------------------------------------------------------------------------------");
+			pSW.WriteLine("".PadRight(5) + "Copy records from Source (SealTestDB2) to Target (SealTestDB2a)");
+			pSW.WriteLine("".PadRight(5) + "-----------------------------------------------------------------");
 			pSW.WriteLine();
 
 			//........tblFile
@@ -1026,7 +1026,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblFile:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblFile:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1045,7 +1045,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblFlowMeter:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblFlowMeter:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1064,7 +1064,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblForceStand:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblForceStand:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1083,7 +1083,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblLeakMedium:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblLeakMedium:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1102,7 +1102,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblLeakStand:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblLeakStand:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1121,7 +1121,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblLoadCell:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblLoadCell:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1140,7 +1140,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblPlatenSurfaceFinish:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblPlatenSurfaceFinish:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1159,7 +1159,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblTestUser:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblTestUser:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1178,7 +1178,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblTestProject:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblTestProject:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1197,7 +1197,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblTestOpCond:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblTestOpCond:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1216,7 +1216,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblTestCavity:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblTestCavity:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1235,7 +1235,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblUnit:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblUnit:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1254,7 +1254,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblSpec:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblSpec:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1273,7 +1273,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblResult_FEA:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblResult_FEA:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1292,7 +1292,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblMO:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblMO:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1311,7 +1311,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblReport:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblReport:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1330,7 +1330,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblReportGenSeal:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblReportGenSeal:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1349,7 +1349,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblReportGenImage:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblReportGenImage:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1368,7 +1368,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblReportResult:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblReportResult:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1387,7 +1387,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblLeak:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblLeak:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1406,7 +1406,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblLeakData:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblLeakData:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1425,7 +1425,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblLoad:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblLoad:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1444,7 +1444,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblLoadData:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblLoadData:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1463,7 +1463,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblPress:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblPress:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1482,7 +1482,7 @@ namespace WindowsFormsApplication1
 				if (pRecCount > 0)
 				{
 					pRecExists = true;
-					pSW.WriteLine("".PadRight(5) + "tblPressureData:".PadRight(18) + pRecCount.ToString() + " Record(s) Exists");
+					pSW.WriteLine("".PadRight(5) + "tblPressureData:".PadRight(18) + pRecCount.ToString() + " Records exist in target.");
 					pSW.WriteLine();
 				}
 			}
@@ -1514,7 +1514,7 @@ namespace WindowsFormsApplication1
 						}
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblFile:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblFile:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -1522,7 +1522,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblFile:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblFile:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -1557,7 +1557,7 @@ namespace WindowsFormsApplication1
 						}
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblFlowMeter:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblFlowMeter:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -1565,7 +1565,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblFlowMeter:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblFlowMeter:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -1601,7 +1601,7 @@ namespace WindowsFormsApplication1
 						}
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblForceStand:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblForceStand:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -1609,7 +1609,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblForceStand:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblForceStand:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -1644,7 +1644,7 @@ namespace WindowsFormsApplication1
 						}
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblLeakMedium:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblLeakMedium:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -1652,7 +1652,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblLeakMedium:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblLeakMedium:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -1688,7 +1688,7 @@ namespace WindowsFormsApplication1
 							}
 							catch (Exception pEx)
 							{
-								pSW.WriteLine("".PadRight(5) + "tblLeakStand:".PadRight(18) + "No Records have been copied");
+								pSW.WriteLine("".PadRight(5) + "tblLeakStand:".PadRight(18) + "No Records copied");
 								pError = true;
 								break;
 							}
@@ -1696,7 +1696,7 @@ namespace WindowsFormsApplication1
 
 						if (!pError)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblLeakStand:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+							pSW.WriteLine("".PadRight(5) + "tblLeakStand:".PadRight(18) + pRecCount.ToString() + " Records copied");
 							pSW.WriteLine();
 							pDR = null;
 						}
@@ -1731,7 +1731,7 @@ namespace WindowsFormsApplication1
 						}
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblLoadCell:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblLoadCell:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -1740,7 +1740,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblLoadCell:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblLoadCell:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -1776,7 +1776,7 @@ namespace WindowsFormsApplication1
 						}
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblPlatenSurfaceFinish:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblPlatenSurfaceFinish:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -1784,7 +1784,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblPlatenSurfaceFinish:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblPlatenSurfaceFinish:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -1882,7 +1882,7 @@ namespace WindowsFormsApplication1
 						}
 						catch
 						{
-							pSW.WriteLine("".PadRight(5) + "tblTestUser:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblTestUser:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -1890,7 +1890,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblTestUser:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblTestUser:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -1951,7 +1951,7 @@ namespace WindowsFormsApplication1
 						}
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblTestProject:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblTestProject:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -1959,7 +1959,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblTestProject:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblTestProject:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -1997,7 +1997,7 @@ namespace WindowsFormsApplication1
 
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblUnit:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblUnit:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -2005,7 +2005,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblTestCavity:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblTestCavity:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -2043,7 +2043,7 @@ namespace WindowsFormsApplication1
 						}
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblTestOpCond:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblTestOpCond:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -2051,7 +2051,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblTestOpCond:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblTestOpCond:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -2089,7 +2089,7 @@ namespace WindowsFormsApplication1
 						}
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblUnit:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblUnit:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -2097,7 +2097,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblUnit:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblUnit:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -2328,7 +2328,7 @@ namespace WindowsFormsApplication1
 
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblSpec:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblSpec:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -2336,7 +2336,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblSpec:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblSpec:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -2372,7 +2372,7 @@ namespace WindowsFormsApplication1
 						}
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblResult_FEA:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblResult_FEA:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -2380,7 +2380,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblResult_FEA:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblResult_FEA:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -2415,7 +2415,7 @@ namespace WindowsFormsApplication1
 						}
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblMO:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblMO:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -2423,7 +2423,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblMO:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblMO:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -2547,7 +2547,7 @@ namespace WindowsFormsApplication1
 
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblReport:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblReport:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -2556,7 +2556,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblReport:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblReport:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -2594,7 +2594,7 @@ namespace WindowsFormsApplication1
 						}
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblReportGenSeal:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblReportGenSeal:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -2602,7 +2602,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblReportGenSeal:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblReportGenSeal:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -2674,7 +2674,7 @@ namespace WindowsFormsApplication1
 						}
 						catch
 						{
-							pSW.WriteLine("".PadRight(5) + "tblReportGenImage:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblReportGenImage:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -2682,7 +2682,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblReportGenImage:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblReportGenImage:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -2720,7 +2720,7 @@ namespace WindowsFormsApplication1
 						}
 						catch
 						{
-							pSW.WriteLine("".PadRight(5) + "tblReportResult:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblReportResult:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -2728,7 +2728,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblReportResult:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblReportResult:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -2775,7 +2775,7 @@ namespace WindowsFormsApplication1
 
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblLeak:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblLeak:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -2783,7 +2783,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblLeak:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblLeak:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -2823,7 +2823,7 @@ namespace WindowsFormsApplication1
 						}
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblLeakData:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblLeakData:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -2831,7 +2831,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblLeakData:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblLeakData:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -2870,7 +2870,7 @@ namespace WindowsFormsApplication1
 						}
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblLoad:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblLoad:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -2878,7 +2878,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblLoad:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblLoad:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -2918,7 +2918,7 @@ namespace WindowsFormsApplication1
 						}
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblLoadData:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblLoadData:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -2926,7 +2926,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblLoadData:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblLoadData:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -2964,7 +2964,7 @@ namespace WindowsFormsApplication1
 						}
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblPress:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblPress:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -2972,7 +2972,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblPress:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblPress:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -3010,7 +3010,7 @@ namespace WindowsFormsApplication1
 						}
 						catch (Exception pEx)
 						{
-							pSW.WriteLine("".PadRight(5) + "tblPressureData:".PadRight(18) + "No Records have been copied");
+							pSW.WriteLine("".PadRight(5) + "tblPressureData:".PadRight(18) + "No Records copied");
 							pError = true;
 							break;
 						}
@@ -3019,7 +3019,7 @@ namespace WindowsFormsApplication1
 
 					if (!pError)
 					{
-						pSW.WriteLine("".PadRight(5) + "tblPressureData:".PadRight(18) + pRecCount.ToString() + " Records have been copied successfully");
+						pSW.WriteLine("".PadRight(5) + "tblPressureData:".PadRight(18) + pRecCount.ToString() + " Records copied");
 						pSW.WriteLine();
 						pDR = null;
 					}
@@ -3033,15 +3033,20 @@ namespace WindowsFormsApplication1
 				#endregion
 
 				MessageBox.Show("Records have been copied succesfully", "Copy Data", MessageBoxButtons.OK);
-				grdDBUtility.Rows[0].Cells[3].Value = true;
+				grdDBUtility.Rows[1].Cells[3].Value = true;
 			}
 			else
 			{				
-				pSW.WriteLine("".PadRight(5) + "Target Database (SealTestDB2a) contains record(s). Copy process aborted.");
-				pSW.Close();
+				pSW.WriteLine("".PadRight(5) + "Target Database (SealTestDB2a) contains records. Copy process aborted.");
+				MessageBox.Show("Copy process aborted.", "Copy Data", MessageBoxButtons.OK);
+				//pSW.Close();
 			}
 
 			#endregion
+			pSW.WriteLine("**************");
+			pSW.WriteLine("");
+			pSW.WriteLine("");
+			pSW.WriteLine("");
 
 			pSW.Close();
 			Cursor = Cursors.Default;
