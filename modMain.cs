@@ -1,10 +1,10 @@
 ﻿//===============================================================================
 //                                                                              '
-//                          SOFTWARE  :  "SealTest-Utility"                     '
+//                          SOFTWARE  :  "DataTransferUtility"                  '
 //                      CLASS MODULE  :  modMain                                '
 //                        VERSION NO  :  1.0                                    '
 //                      DEVELOPED BY  :  AdvEnSoft, Inc.                        '
-//                     LAST MODIFIED  :  04DEC17                                '
+//                     LAST MODIFIED  :  07DEC17                                '
 //                                                                              '
 //===============================================================================
 
@@ -29,7 +29,6 @@ namespace WindowsFormsApplication1
         static void Main()
         {
             Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMain());
         }
     }

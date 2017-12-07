@@ -1,10 +1,10 @@
 ﻿//===============================================================================
 //                                                                              '
-//                          SOFTWARE  :  "SealTest-Utility"                     '
+//                          SOFTWARE  :  "DataTransferUtility"                  '
 //                      CLASS MODULE  :  clsDB                                  '
 //                        VERSION NO  :  1.0                                    '
 //                      DEVELOPED BY  :  AdvEnSoft, Inc.                        '
-//                     LAST MODIFIED  :  04DEC17                                '
+//                     LAST MODIFIED  :  07DEC17                                '
 //                                                                              '
 //===============================================================================
 
@@ -30,7 +30,6 @@ namespace WindowsFormsApplication1
             try
             {
                 string pstrConnectDB = "";
-				//pstrConnectDB = "Data source= PC-06;" +
 				pstrConnectDB = "Data source= " + modMain.gFile.DataSourceName + ";" +
 								"Initial Catalog = " + DBName_In + ";" +
                                 "Integrated Security= SSPI;";
@@ -58,17 +57,17 @@ namespace WindowsFormsApplication1
             return pGetConnection;
         }
 
+
         public SqlDataReader GetDataReader(String DBName_In, string strSELECTQry_In,ref SqlConnection Conn_In)
         //===================================================================================================== 
 
-               //This routine returns DataReader
+        //This routine returns DataReader
         //       Input   Parameters      :   SQL Statement 
         //       Output  Parameters      :   DataReader
         {
             try
             {
                 string pstrConnectDB = "";
-				//pstrConnectDB = "Data source= PC-06;" +
 				pstrConnectDB = "Data source= " + modMain.gFile.DataSourceName + ";" +
 								"Initial Catalog = " + DBName_In + ";" +
                                 "Integrated Security= SSPI;";
@@ -106,7 +105,9 @@ namespace WindowsFormsApplication1
             }
 
             finally
-            { pGetDataReader = pDR; }
+            {
+				pGetDataReader = pDR;
+			}
 
             return pGetDataReader;
         }

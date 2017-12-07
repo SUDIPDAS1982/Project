@@ -1,10 +1,10 @@
 ﻿//===============================================================================
 //                                                                              '
-//                          SOFTWARE  :  "SealTest-Utility"                     '
+//                          SOFTWARE  :  "DataTransferUtility"                  '
 //                      CLASS MODULE  :  clsFile                                '
 //                        VERSION NO  :  1.0                                    '
 //                      DEVELOPED BY  :  AdvEnSoft, Inc.                        '
-//                     LAST MODIFIED  :  04DEC17                                '
+//                     LAST MODIFIED  :  07DEC17                                '
 //                                                                              '
 //===============================================================================
 
@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1
 			private const String mcDriveRoot = "C:";
 
 			//....Root Directory.
-			private const String mcDirRoor = mcDriveRoot + "\\Seal Suite\\";
+			private const String mcDirRoor = mcDriveRoot + "\\SealSuite\\";
 
 			//Titles & Names:            
 			//------------------
@@ -35,30 +35,29 @@ namespace WindowsFormsApplication1
 		
 
 			private String mDataSourceName;
-            private const string mcLogFileName = mcDirRoor + "SealTest\\Log File\\DataTransferLog.txt";
+            private const string mcLogFileName = mcDirRoor + "DataTransferUtility\\Log File\\DataTransferLog.txt";
 			private const String mConfigFile_Name = mcDirRoor + mcConfigFile_Title;
 
 		#endregion
 
 		#region "PROPERTY ROUTINES:"
 
-		public String DataSourceName
+			public String DataSourceName
             //=======================
             {
                 get { return mDataSourceName; }
                 set { mDataSourceName = value; }
             }
 
-		public String LogFileName
-			//====================
-		{
-			get {return mcLogFileName; }
-		}
+			public String LogFileName
+			//=======================
+			{
+				get {return mcLogFileName; }
+			}
 
         #endregion
 
-
-            #region "CONSTRUCTOR:"
+		#region "CONSTRUCTOR:"
             
                 public clsFile()
                 //===============
@@ -66,13 +65,12 @@ namespace WindowsFormsApplication1
                     //....Reads Configuration File.
                     ReadConfigFile();
                 }
+
             #endregion
+		
+        #region  "UTILITY ROUTINES:"
 
-
-            #region  "UTILITY ROUTINES:"
-
-
-                public void ReadConfigFile()
+		        public void ReadConfigFile()
                 //=======================
                 {
                     FileStream pSR;
