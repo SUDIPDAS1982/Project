@@ -31,11 +31,12 @@ namespace WindowsFormsApplication1
 
 			//Titles & Names:            
 			//------------------
-			private const String mcConfigFile_Title = "Seal10.config";
+			private const String mcConfigFile_Title = "SealSuite10.config";
 		
 
 			private String mDataSourceName;
-            private const string mcLogFileName = mcDirRoor + "DataTransferUtility\\Log File\\DataTransferLog.txt";
+			private const string mcLogFilePath = mcDirRoor + "DataTransferUtility\\Log File";
+			private const string mcLogFileName = mcLogFilePath + "\\DataTransferLog.txt";
 			private const String mConfigFile_Name = mcDirRoor + mcConfigFile_Title;
 
 		#endregion
@@ -48,6 +49,12 @@ namespace WindowsFormsApplication1
                 get { return mDataSourceName; }
                 set { mDataSourceName = value; }
             }
+
+			public String LogFilePath
+			//=======================
+			{
+				get { return mcLogFilePath; }
+			}
 
 			public String LogFileName
 			//=======================

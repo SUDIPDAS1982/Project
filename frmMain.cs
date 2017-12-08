@@ -87,6 +87,11 @@ namespace WindowsFormsApplication1
 					Cursor = Cursors.WaitCursor;
 					StreamWriter pSW = null;
 
+					if (!Directory.Exists(modMain.gFile.LogFilePath))
+					{
+						Directory.CreateDirectory(modMain.gFile.LogFilePath);
+					}
+
 					if (File.Exists(modMain.gFile.LogFileName))
 					{
 						pSW = new StreamWriter(modMain.gFile.LogFileName, true);
@@ -959,6 +964,11 @@ namespace WindowsFormsApplication1
 					Cursor = Cursors.WaitCursor;
 
 					StreamWriter pSW = null;
+
+					if (!Directory.Exists(modMain.gFile.LogFilePath))
+					{
+						Directory.CreateDirectory(modMain.gFile.LogFilePath);
+					}
 
 					if (File.Exists(modMain.gFile.LogFileName))
 					{
@@ -3008,7 +3018,7 @@ namespace WindowsFormsApplication1
 				#endregion
 
 						grdDBUtility.Rows[1].Cells[3].Value = true;
-						MessageBox.Show("Records have been copied succesfully", "Copy Data", MessageBoxButtons.OK);
+						MessageBox.Show("Records have been copied succesfully.", "Copy Data", MessageBoxButtons.OK);
 						
 					}
 					else
